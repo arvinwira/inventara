@@ -2,7 +2,7 @@
     <!-- Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('login') }}" novalidate id="form-login">
         @csrf
 
         <!-- Alamat Email -->
@@ -15,12 +15,15 @@
         <!-- Kata Sandi -->
         <div class="mt-4">
             <x-input-label for="password" value="Kata Sandi" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
+            <div class="relative">
+                <x-text-input id="password" class="block mt-1 w-full pr-10"
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
+                <button type="button" aria-label="Tampilkan kata sandi" data-toggle-password="password" class="absolute inset-y-0 right-0 pr-3 flex items-center text-neutral-500 hover:text-neutral-700">
+                    <span class="material-icons text-base">visibility</span>
+                </button>
+            </div>
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
@@ -44,4 +47,31 @@
             </x-primary-button>
         </div>
     </form>
+    <script>
+      (function(){
+        const form = document.getElementById('form-login');
+        if (!form) return;
+        const notyf = window.Notyf ? new Notyf({ duration: 3500, position:{x:'right',y:'top'} }) : null;
+        const email = document.getElementById('email');
+        const pwd = document.getElementById('password');
+        const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        form.addEventListener('submit', function(e){
+          let ok = true;
+          if (!email.value || !emailRe.test(email.value)) { ok = false; notyf && notyf.error('Masukkan email yang valid.'); }
+          if (!pwd.value) { ok = false; notyf && notyf.error('Kata sandi wajib diisi.'); }
+          if (!ok) e.preventDefault();
+        });
+        // Toggle password visibility
+        document.querySelectorAll('[data-toggle-password]').forEach(btn=>{
+          btn.addEventListener('click', () => {
+            const id = btn.getAttribute('data-toggle-password');
+            const input = document.getElementById(id);
+            if (!input) return;
+            const isPwd = input.type === 'password';
+            input.type = isPwd ? 'text' : 'password';
+            btn.querySelector('.material-icons').textContent = isPwd ? 'visibility_off' : 'visibility';
+          });
+        });
+      })();
+    </script>
 </x-guest-layout>
