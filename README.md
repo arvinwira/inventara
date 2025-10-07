@@ -1,61 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+﻿<p align="center">
+  <img src="public/logo/inventara_logo.svg" alt="Inventara" height="80" />
 </p>
 
-## About Laravel
+# Inventara — Aplikasi Inventaris & Penjualan untuk UMKM
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Kelola produk, stok, supplier, transaksi, dan laporan harian dengan cepat dan sederhana.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Manajemen Produk & Stok: CRUD produk, satuan, harga beli/jual, reorder point.
+- Supplier & Pembelian: relasi supplier dan purchase order (roadmap).
+- Point of Sale (POS): input transaksi penjualan, cetak struk PDF (roadmap).
+- Dashboard & Laporan: ringkasan penjualan, produk terlaris, stok menipis, export PDF/CSV (roadmap/parsial).
+- Analytics Ringkas: total pendapatan, jumlah transaksi, rata-rata pembelian (roadmap).
+- Inventaris: pencatatan pergerakan stok (PURCHASE, SALE, ADJUST, RETURN).
+- Autentikasi modern: toast notifikasi, pemeriksaan kekuatan kata sandi, anti-email enumeration.
 
-## Learning Laravel
+## Teknologi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laravel 12, PHP 8.3
+- Blade + TailwindCSS + Vite
+- Notyf (toast JS)
+- Material Icons (untuk toggle tampil/sembunyikan kata sandi)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Prasyarat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP 8.2+
+- Composer
+- Node.js 18+
+- MySQL/MariaDB/PostgreSQL (sesuaikan `.env`)
 
-## Laravel Sponsors
+## Instalasi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Clone repo ini.
+- Install dependency PHP: `composer install`
+- Install dependency JS: `npm install`
+- Duplikat file env: `cp .env.example .env` lalu set koneksi database dan `APP_URL` (contoh: `http://inventara.test`).
+- Generate key: `php artisan key:generate`
 
-### Premium Partners
+## Jalankan Migrasi & Seed
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Migrasi database: `php artisan migrate`
+- Seed data dasar: `php artisan db:seed`
+  - Seeder akan membuat akun:
+    - Admin: `admin@example.com` / `admin123`
+    - 3 kasir dummy: password `admin123`
+  - Produk awal dari `ProductSeeder`
+  - Pergerakan stok awal (ADJUST) + contoh `SALE` kecil per produk
 
-## Contributing
+Jika ingin reset bersih:
+- `php artisan migrate:fresh --seed`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Menjalankan Aplikasi
 
-## Code of Conduct
+- Development assets: `npm run dev`
+- Production build: `npm run build`
+- Jalankan server: `php artisan serve` (atau gunakan Valet/Laragon sesuai preferensi)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Akses:
+- Landing: `/`
+- Login/Daftar: `/login`, `/register`
+- Dashboard: `/dashboard` (setelah login)
 
-## Security Vulnerabilities
+## Branding UI
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Warna brand: `#B71C1C` (Tailwind key: `brand`), telah dikonfigurasi di `tailwind.config.js`.
+- Font: Montserrat (heading) + Poppins (teks), diimport pada `resources/css/app.css`.
+- Logo: `public/logo/inventara_logo.svg`
+- Favicon: `public/logo/inventara_favicon.svg` (square, jelas di 16×16).
+- Ilustrasi landing: `public/images/hero-warehouse.svg`, `public/images/dashboard-preview.svg`.
 
-## License
+## UX & Keamanan Autentikasi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Notifikasi toast (Notyf) untuk status sukses/error (bukan alert browser).
+- Toggle tampil/sembunyikan kata sandi dengan Material Icons pada semua form auth.
+- Password checker (Register/Reset):
+  - Wajib: minimal 8 karakter, mengandung huruf dan angka.
+  - Rekomendasi: huruf besar dan simbol (skor meter 0–5).
+- Anti email enumeration pada lupa kata sandi: selalu mengirim respons sukses generik.
+- Rate limiting login dengan pesan berbahasa Indonesia.
+
+## Struktur Data (ringkas)
+
+- `products`: sku, name, category, unit, cost_price, sell_price, reorder_point.
+- `inventory_movements`: product_id, type (PURCHASE|SALE|ADJUST|RETURN), qty, note.
+- Relasi: `Product hasMany InventoryMovement`.
+- Akses stok saat ini: accessor `Product::$current_stock` dihitung dari pergerakan.
+
+## Perintah Berguna
+
+- Hapus cache/kompilasi: `php artisan optimize:clear`
+- Cek route: `php artisan route:list`
+- Tinker: `php artisan tinker`
+
+## Troubleshooting
+
+- Favicon tidak berubah: lakukan hard refresh (Ctrl/Cmd + Shift + R) atau buka jendela private. Kami menambahkan query `?v=1` untuk cache busting.
+- Error “Namespace declaration has to be the very first statement”: pastikan file PHP disimpan sebagai UTF‑8 tanpa BOM. Jalankan `php artisan optimize:clear` setelah mengedit file.
+- CSS tidak terupdate: pastikan `npm run dev` aktif atau `npm run build` telah dijalankan.
+
+## Lisensi
+
+- Aplikasi ini dibangun di atas Laravel (MIT). Konten kode aplikasi Inventara hak cipta pemilik proyek.
