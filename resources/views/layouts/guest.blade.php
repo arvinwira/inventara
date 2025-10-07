@@ -8,6 +8,7 @@
         <title>{{ config('app.name', 'Inventara') }}</title>
         <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_favicon.svg') }}?v=1">
         <meta name="theme-color" content="#B71C1C">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -28,5 +29,7 @@
                 {{ $slot }}
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        @include('partials.toast')
     </body>
 </html>

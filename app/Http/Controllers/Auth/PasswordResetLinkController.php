@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Auth;
 
@@ -36,10 +36,7 @@ class PasswordResetLinkController extends Controller
 
         // Untuk menghindari email enumeration/bruteforce, selalu kirim respons sukses
         // tanpa membocorkan apakah email terdaftar atau tidak.
-        return back()->with('status', __(
-            $status === Password::RESET_LINK_SENT
-                ? $status
-                : Password::RESET_LINK_SENT
-        ));
+        return back()->with('status', 'Jika email terdaftar, tautan reset kata sandi telah dikirim.');
     }
 }
+

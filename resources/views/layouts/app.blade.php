@@ -13,6 +13,7 @@
         <meta property="og:image" content="{{ asset('logo/inventara_logo.svg') }}">
         <meta property="og:title" content="Inventara — Kelola Stok & Penjualan Mudah">
         <meta property="og:description" content="Aplikasi untuk UMKM: produk, stok, transaksi, dan laporan.">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -37,6 +38,7 @@
                 {{ $slot }}
             </main>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        @include('partials.toast')
     </body>
 </html>
-
