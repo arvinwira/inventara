@@ -1,8 +1,14 @@
 /* resources/css/app.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Material+Icons&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Material+Icons&display=swap');
 
 /* tailwind ya mek */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4, .heading {
+    @apply font-heading;
+  }
+}
