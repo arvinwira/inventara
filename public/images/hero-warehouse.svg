@@ -1,0 +1,26 @@
+<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" rx="24" fill="#FFFFFF"/>
+  <rect x="60" y="80" width="780" height="440" rx="16" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <!-- Racks -->
+  <rect x="100" y="130" width="160" height="320" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="290" y="130" width="160" height="320" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="480" y="130" width="160" height="320" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="670" y="130" width="160" height="320" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <!-- Boxes -->
+  <rect x="120" y="160" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="120" y="240" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="120" y="320" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="310" y="160" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="310" y="240" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="310" y="320" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="500" y="160" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="500" y="240" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="500" y="320" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="690" y="160" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="690" y="240" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <rect x="690" y="320" width="120" height="60" rx="8" fill="#B71C1C" fill-opacity="0.15"/>
+  <!-- Truck silhouette -->
+  <rect x="120" y="430" width="660" height="30" rx="8" fill="#E2E8F0"/>
+  <circle cx="720" cy="475" r="16" fill="#94A3B8"/>
+  <circle cx="200" cy="475" r="16" fill="#94A3B8"/>
+</svg>

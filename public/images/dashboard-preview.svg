@@ -1,0 +1,21 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="24" fill="#FFFFFF"/>
+  <rect x="40" y="40" width="1120" height="720" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <!-- Top cards -->
+  <rect x="80" y="80" width="240" height="100" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="340" y="80" width="240" height="100" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="600" y="80" width="240" height="100" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="860" y="80" width="240" height="100" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <!-- Chart -->
+  <rect x="80" y="200" width="680" height="380" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <polyline points="120,540 200,500 280,520 360,460 440,470 520,420 600,460 680,380 740,420" fill="none" stroke="#B71C1C" stroke-width="6"/>
+  <!-- Top sellers -->
+  <rect x="780" y="200" width="320" height="220" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="800" y="230" width="280" height="24" rx="6" fill="#F1F5F9"/>
+  <rect x="800" y="270" width="280" height="24" rx="6" fill="#F1F5F9"/>
+  <rect x="800" y="310" width="280" height="24" rx="6" fill="#F1F5F9"/>
+  <!-- Low stock -->
+  <rect x="780" y="440" width="320" height="140" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="800" y="470" width="280" height="24" rx="6" fill="#FEE2E2"/>
+  <rect x="800" y="510" width="220" height="24" rx="6" fill="#FEE2E2"/>
+</svg>
