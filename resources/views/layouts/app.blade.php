@@ -7,12 +7,12 @@
 
         <title>{{ config('app.name', 'Inventara') }}</title>
 
-        <!-- Favicon & Logo -->
-        <link rel="icon" type="image/svg+xml" href="{{ asset('/logo/in') }}">
-        <link rel="alternate icon" href="{{ asset('logo/inventara_log.svg') }}">
+        <!-- Favicon & Meta -->
+        <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_log.svg') }}?v=2">
+        <meta name="theme-color" content="#B71C1C">
         <meta property="og:image" content="{{ asset('logo/inventara_log.svg') }}">
         <meta property="og:title" content="Inventara — Kelola Stok & Penjualan Mudah">
-        <meta property="og:description" content="Aplikasi web untuk UMKM mengelola inventaris, penjualan, dan laporan bisnis.">
+        <meta property="og:description" content="Aplikasi untuk UMKM: produk, stok, transaksi, dan laporan.">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

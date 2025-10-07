@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inventara - Kelola Stok & Penjualan UMKM</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_log.svg') }}?v=2">
+    <meta name="theme-color" content="#B71C1C">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased text-neutral-800">
@@ -43,7 +45,7 @@
                     </ul>
                 </div>
                 <div class="relative" data-animate="hero-illust">
-                    <img src="{{ asset('images/hero-warehouse.svg') }}" alt="Ilustrasi gudang & rak produk" class="mx-auto max-w-lg drop-shadow-xl will-change-transform opacity-0 translate-y-4">
+                    <img src="{{ asset('images/hero-warehouse-2.svg') }}" alt="Ilustrasi gudang & rak produk" class="mx-auto max-w-lg drop-shadow-xl will-change-transform opacity-0 translate-y-4">
                     <div class="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-brand/10 blur-3xl"></div>
                 </div>
             </div>
