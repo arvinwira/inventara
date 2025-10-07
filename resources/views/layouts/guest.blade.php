@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Inventara') }}</title>
-        <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_log.svg') }}">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_favicon.svg') }}?v=1">
         <meta name="theme-color" content="#B71C1C">
 
         <!-- Fonts -->

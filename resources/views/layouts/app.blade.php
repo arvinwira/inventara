@@ -8,9 +8,9 @@
         <title>{{ config('app.name', 'Inventara') }}</title>
 
         <!-- Favicon & Meta -->
-        <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_log.svg') }}?v=2">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_favicon.svg') }}?v=1">
         <meta name="theme-color" content="#B71C1C">
-        <meta property="og:image" content="{{ asset('logo/inventara_log.svg') }}">
+        <meta property="og:image" content="{{ asset('logo/inventara_logo.svg') }}">
         <meta property="og:title" content="Inventara — Kelola Stok & Penjualan Mudah">
         <meta property="og:description" content="Aplikasi untuk UMKM: produk, stok, transaksi, dan laporan.">
 
@@ -39,3 +39,4 @@
         </div>
     </body>
 </html>
+

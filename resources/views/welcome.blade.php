@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inventara - Kelola Stok & Penjualan UMKM</title>
-    <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_log.svg') }}?v=2">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('logo/inventara_favicon.svg') }}?v=1">
     <meta name="theme-color" content="#B71C1C">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -12,7 +12,7 @@
     <header class="border-b border-neutral-200/60">
         <div class="container flex items-center justify-between py-4">
             <div class="flex items-center gap-3" id="logo-wrap">
-                <img src="{{ asset('logo/inventara_log.svg') }}" alt="Inventara" class="h-20 md:h-24 w-auto will-change-transform" id="brand-logo">
+                <img src="{{ asset('logo/inventara_logo.svg') }}" alt="Inventara" class="h-24 md:h-28 w-auto will-change-transform" id="brand-logo">
                 <span class="sr-only">Inventara</span>
             </div>
             <nav class="hidden md:flex items-center gap-6 text-sm">
