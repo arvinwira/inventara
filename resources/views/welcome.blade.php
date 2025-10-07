@@ -12,8 +12,10 @@
     <header class="border-b border-neutral-200/60">
         <div class="container flex items-center justify-between py-4">
             <div class="flex items-center gap-3" id="logo-wrap">
-                <img src="{{ asset('logo/inventara_logo.svg') }}" alt="Inventara" class="h-24 md:h-28 w-auto will-change-transform" id="brand-logo">
-                <span class="sr-only">Inventara</span>
+                <a href="{{ auth()->check() ? route('dashboard') : url('/') }}" class="inline-flex items-center">
+                    <img src="{{ asset('logo/inventara_logo.svg') }}" alt="Inventara" class="h-24 md:h-28 w-auto will-change-transform" id="brand-logo">
+                    <span class="sr-only">Inventara</span>
+                </a>
             </div>
             <nav class="hidden md:flex items-center gap-6 text-sm">
                 <a href="#fitur" class="hover:text-brand">Fitur</a>

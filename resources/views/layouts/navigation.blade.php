@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}" class="inline-flex items-center">
+                    <a href="{{ url('/') }}" class="inline-flex items-center">
                         <img src="{{ asset('logo/inventara_logo.svg') }}" alt="Inventara" class="h-8 md:h-10 w-auto">
                     </a>
                 </div>
