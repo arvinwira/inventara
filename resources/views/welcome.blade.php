@@ -11,7 +11,7 @@
     <header class="border-b border-neutral-200/60">
         <div class="container flex items-center justify-between py-4">
             <div class="flex items-center gap-3">
-                <img src="{{ asset('logo/inventara_logo.svg') }}" alt="Inventara" class="h-8 w-auto">
+                <img src="{{ asset('logo/inventara_log.svg') }}" alt="Inventara" class="h-14 w-auto">
                 <span class="sr-only">Inventara</span>
             </div>
             <nav class="hidden md:flex items-center gap-6 text-sm">
